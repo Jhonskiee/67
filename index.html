@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eljhon's WEB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= AUTH PAGE ================= -->
+<div id="authPage" class="auth-container">
+
+    <div class="form-box">
+        <h2>Eljhon's WEB</h2>
+
+        <div id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Email">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <button onclick="login()">Login</button>
+            <p onclick="showRegister()">Create new account</p>
+        </div>
+
+        <div id="registerForm" style="display:none;">
+            <input type="text" id="regName" placeholder="Full Name">
+            <input type="email" id="regEmail" placeholder="Email">
+            <input type="password" id="regPassword" placeholder="Password">
+            <button onclick="register()">Register</button>
+            <p onclick="showLogin()">Already have account?</p>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- ================= HOME PAGE ================= -->
+<div id="homePage" style="display:none;">
+
+    <div class="navbar">
+        <h2>Eljhon's WEB</h2>
+        <span id="welcomeUser"></span>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <div class="container">
+
+        <!-- LEFT SIDEBAR -->
+        <div class="sidebar">
+            <h3>Users</h3>
+            <div id="usersList"></div>
+        </div>
+
+        <!-- MAIN FEED -->
+        <div class="feed-container">
+
+            <div class="create-post">
+                <textarea id="postContent" placeholder="What's on your mind?"></textarea>
+                <button onclick="createPost()">Post</button>
+            </div>
+
+            <div id="feed"></div>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
